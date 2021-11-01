@@ -3,7 +3,24 @@
     <body>
         <%- include ("./partials/nav.ejs") %>
             <div class="container">
-                <h1>index</h1>
+                <h1>Perguntas feitas</h1>
+                <% perguntas.forEach(pergunta => {   %>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>
+                                <a href="perguntar/"></a>
+                                <%= pergunta.titulo%>
+                            </h3>
+                        </div>
+                        <div class="card-footer">
+                            <a href="responder/<%= pergunta.id %>"> <button class="btn btn-dark"> Responder</button></a>
+                        </div>
+                    </div>
+                    <%  });  %>
+
+
+
+
             </div>
     </body>
     <%- include ("./partials/footer.ejs") %>
